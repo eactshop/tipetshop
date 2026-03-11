@@ -8,6 +8,23 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap"
         rel="stylesheet">
+    <!-- TikTok Pixel Code Start -->
+    <script>
+        !function (w, d, t) {
+            w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) {
+                for (
+                    var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e
+            }, ttq.load = function (e, n) {
+                var r = "https://analytics.tiktok.com/i18n/pixel/events.js", o = n && n.partner; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = r, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {}; n = document.createElement("script")
+                    ; n.type = "text/javascript", n.async = !0, n.src = r + "?sdkid=" + e + "&lib=" + t; e = document.getElementsByTagName("script")[0]; e.parentNode.insertBefore(n, e)
+            };
+
+
+            ttq.load('D6OP723C77UFILRRBP30');
+            ttq.page();
+        }(window, document, 'ttq');
+    </script>
+    <!-- TikTok Pixel Code End -->
     <style>
         :root {
             --primary: #ff2d55;
@@ -467,7 +484,7 @@
             background: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,.09);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .09);
             cursor: pointer;
             transition: transform .15s, box-shadow .15s;
             display: flex;
@@ -476,7 +493,7 @@
 
         .rel-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(0,0,0,.13);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, .13);
         }
 
         .rel-card-img-wrap {
@@ -999,13 +1016,20 @@
             align-items: center;
             justify-content: space-between;
             gap: 10px;
-            box-shadow: 0 4px 14px rgba(255,45,85,.35);
+            box-shadow: 0 4px 14px rgba(255, 45, 85, .35);
             animation: flashPulse 1.8s ease-in-out infinite;
         }
 
         @keyframes flashPulse {
-            0%, 100% { box-shadow: 0 4px 14px rgba(255,45,85,.35); }
-            50% { box-shadow: 0 4px 24px rgba(255,45,85,.6); }
+
+            0%,
+            100% {
+                box-shadow: 0 4px 14px rgba(255, 45, 85, .35);
+            }
+
+            50% {
+                box-shadow: 0 4px 24px rgba(255, 45, 85, .6);
+            }
         }
 
         .flash-sale-left {
@@ -1031,13 +1055,20 @@
         }
 
         @keyframes boltBlink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: .3; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: .3;
+            }
         }
 
         .flash-sale-sub {
             font-size: .72rem;
-            color: rgba(255,255,255,.85);
+            color: rgba(255, 255, 255, .85);
             font-weight: 600;
         }
 
@@ -1050,7 +1081,7 @@
 
         .flash-ends-label {
             font-size: .65rem;
-            color: rgba(255,255,255,.8);
+            color: rgba(255, 255, 255, .8);
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: .5px;
@@ -1063,7 +1094,7 @@
         }
 
         .cd-block {
-            background: rgba(0,0,0,.3);
+            background: rgba(0, 0, 0, .3);
             border-radius: 6px;
             padding: 4px 7px;
             min-width: 34px;
@@ -1092,7 +1123,7 @@
 
         .flash-sold-label {
             font-size: .72rem;
-            color: rgba(255,255,255,.9);
+            color: rgba(255, 255, 255, .9);
             font-weight: 700;
             margin-bottom: 4px;
             display: flex;
@@ -1100,7 +1131,7 @@
         }
 
         .flash-bar-track {
-            background: rgba(0,0,0,.2);
+            background: rgba(0, 0, 0, .2);
             border-radius: 10px;
             height: 8px;
             overflow: hidden;
@@ -1178,20 +1209,13 @@
         <!-- GALLERY -->
         <div class="gallery">
             <div class="gallery-main" id="mainImgs">
-                <img src="./img/1.webp"
-                    class="active" alt="Fleas Are Afraid 1">
-                <img src="./img/2.webp"
-                    alt="Fleas Are Afraid 2">
-                <img src="./img/3.webp"
-                    alt="Fleas Are Afraid 3">
-                <img src="./img/4.webp"
-                    alt="Fleas Are Afraid 4">
-                <img src="./img/5.webp"
-                    alt="Fleas Are Afraid 5">
-                <img src="./img/6.webp"
-                    alt="Fleas Are Afraid 6">
-                <img src="./img/7.webp"
-                    alt="Fleas Are Afraid 7">
+                <img src="./img/1.webp" class="active" alt="Fleas Are Afraid 1">
+                <img src="./img/2.webp" alt="Fleas Are Afraid 2">
+                <img src="./img/3.webp" alt="Fleas Are Afraid 3">
+                <img src="./img/4.webp" alt="Fleas Are Afraid 4">
+                <img src="./img/5.webp" alt="Fleas Are Afraid 5">
+                <img src="./img/6.webp" alt="Fleas Are Afraid 6">
+                <img src="./img/7.webp" alt="Fleas Are Afraid 7">
             </div>
             <div class="scroll-dots" id="scrollDots">
                 <div class="scroll-dot active"></div>
@@ -1203,26 +1227,19 @@
                 <div class="scroll-dot"></div>
             </div>
             <div class="gallery-thumbs" id="thumbRow">
-                <img src="./img/1.webp"
-                    class="active" onclick="setImg(0)">
-                <img src="./img/2.webp"
-                    onclick="setImg(1)">
-                <img src="./img/3.webp"
-                    onclick="setImg(2)">
-                <img src="./img/4.webp"
-                    onclick="setImg(3)">
-                <img src="./img/5.webp"
-                    onclick="setImg(4)">
-                <img src="./img/6.webp"
-                    onclick="setImg(5)">
-                <img src="./img/7.webp"
-                    onclick="setImg(6)">
+                <img src="./img/1.webp" class="active" onclick="setImg(0)">
+                <img src="./img/2.webp" onclick="setImg(1)">
+                <img src="./img/3.webp" onclick="setImg(2)">
+                <img src="./img/4.webp" onclick="setImg(3)">
+                <img src="./img/5.webp" onclick="setImg(4)">
+                <img src="./img/6.webp" onclick="setImg(5)">
+                <img src="./img/7.webp" onclick="setImg(6)">
             </div>
         </div>
 
         <!-- PRODUCT INFO -->
         <div class="prod-info">
-        <!-- FLASH SALE BANNER -->
+            <!-- FLASH SALE BANNER -->
             <div class="flash-sale-banner" id="flashSaleBanner">
                 <div style="flex:1">
                     <div class="flash-sale-left">
@@ -1234,7 +1251,9 @@
                             <span>🔥 Đã bán 72%</span>
                             <span>Còn 28 suất</span>
                         </div>
-                        <div class="flash-bar-track"><div class="flash-bar-fill"></div></div>
+                        <div class="flash-bar-track">
+                            <div class="flash-bar-fill"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="flash-sale-right">
@@ -1282,7 +1301,8 @@
             </div>
             <!-- WEIGHT VARIANTS -->
             <div class="variant-section">
-                <div class="variant-label">⚖️ Phân loại: <span class="selected-variant" id="selectedVariantLabel">1kg — 129.000₫</span></div>
+                <div class="variant-label">⚖️ Phân loại: <span class="selected-variant" id="selectedVariantLabel">1kg —
+                        129.000₫</span></div>
                 <div class="variant-options">
                     <button class="variant-btn active" onclick="selectVariant(this, '1kg', 129000)">
                         <span class="v-weight">1kg</span>
@@ -1387,16 +1407,16 @@
             </div>
             <div class="review-cards">
                 <div class="review-card">
-                    <div class="rc-header"><span class="rc-name">Nguyễn Thị Lan</span><span
-                            class="rc-date" id="rc-date"></span></div>
+                    <div class="rc-header"><span class="rc-name">Nguyễn Thị Lan</span><span class="rc-date"
+                            id="rc-date"></span></div>
                     <div class="rc-stars">★★★★★</div>
                     <div class="rc-text">Bánh ngon. Hạn mới. Mèo rất thích ăn ạ. Giao nhanh. Đủ số lượng. Đóng gói cẩn
                         thận k bị lộn xộn. K móp méo bể vỡ. 5* cho shop nhé.</div>
                     <div class="rc-verified">✔ Đã mua hàng</div>
                 </div>
                 <div class="review-card">
-                    <div class="rc-header"><span class="rc-name">Trần Văn Minh</span><span
-                            class="rc-date"id="rc-date1"></span></div>
+                    <div class="rc-header"><span class="rc-name">Trần Văn Minh</span><span class="rc-date"
+                            id="rc-date1"></span></div>
                     <div class="rc-stars">★★★★★</div>
                     <div class="rc-text">Mèo nhà mình mê bánh cá này lắm luôn 😻. Mở gói ra là chạy lại đòi ngay, mùi
                         thơm dễ chịu chứ không bị hắc. Miếng bánh nhỏ vừa miệng, tiện cho ăn vặt hoặc thưởng khi chơi.
@@ -1408,8 +1428,8 @@
                     <div class="rc-verified">✔ Đã mua hàng</div>
                 </div>
                 <div class="review-card">
-                    <div class="rc-header"><span class="rc-name">Phạm Hồng Nhung</span><span
-                            class="rc-date"id="rc-date2"></span></div>
+                    <div class="rc-header"><span class="rc-name">Phạm Hồng Nhung</span><span class="rc-date"
+                            id="rc-date2"></span></div>
                     <div class="rc-stars">★★★★★</div>
                     <div class="rc-text">Mình đã cho 2 bé mèo ăn. Bé rất thích. Mùi viên cỏ mèo thơm. Mèo mình mấy nay
                         nôn ra búi lông. Mình mua về cho ăn thử xem có tiêu búi lông không. Nếu ổn mình sẽ quay lại ủng
@@ -1417,7 +1437,7 @@
                     <div class="rc-verified">✔ Đã mua hàng</div>
                 </div>
                 <div class="review-card">
-                    <div class="rc-header"><span class="rc-name">Hà Vi</span><span class="rc-date"id="rc-date3"></span>
+                    <div class="rc-header"><span class="rc-name">Hà Vi</span><span class="rc-date" id="rc-date3"></span>
                     </div>
                     <div class="rc-stars">★★★★★</div>
                     <div class="rc-text">Giao hàng nhanh. Đóng gói cẩn thận. Được tặng thêm 3 gói súp thưởng. Cám và vụn
@@ -1425,8 +1445,8 @@
                     <div class="rc-verified">✔ Đã mua hàng</div>
                 </div>
                 <div class="review-card">
-                    <div class="rc-header"><span class="rc-name">Hương Giang</span><span
-                            class="rc-date"id="rc-date4"></span></div>
+                    <div class="rc-header"><span class="rc-name">Hương Giang</span><span class="rc-date"
+                            id="rc-date4"></span></div>
                     <div class="rc-stars">★★★★★</div>
                     <div class="rc-text">Hàng giao nhanh lắm, những cái mùi rất thơm mèo rất thích, cảm ơn shop ạ lần
                         tới sẽ ủng hộ shop tiếp</div>
@@ -1458,7 +1478,8 @@
                     </div>
                 </div>
 
-                <div class="rel-card" onclick="addRelated('Bàn Cào Móng Tròn Cho Mèo', 39000, './img/BÀN CÀO- bìa.png')">
+                <div class="rel-card"
+                    onclick="addRelated('Bàn Cào Móng Tròn Cho Mèo', 39000, './img/BÀN CÀO- bìa.png')">
                     <div class="rel-card-img-wrap">
                         <img src="./img/BÀN CÀO- bìa.png"
                             onerror="this.src='https://placehold.co/300x300/f0f8ff/4a90d9?text=🐾+Bàn+Cào'"
@@ -1476,7 +1497,8 @@
                     </div>
                 </div>
 
-                <div class="rel-card" onclick="addRelated('Hạt KawaiCat Túi 1,5Kg Hương Vị Cá Hồi', 159000, './img/LONG CAT- bìa (1).png')">
+                <div class="rel-card"
+                    onclick="addRelated('Hạt KawaiCat Túi 1,5Kg Hương Vị Cá Hồi', 159000, './img/LONG CAT- bìa (1).png')">
                     <div class="rel-card-img-wrap">
                         <img src="./img/LONG CAT- bìa (1).png"
                             onerror="this.src='https://placehold.co/300x300/fff0f5/ff2d55?text=🐱+Hạt+KawaiCat'"
@@ -1494,7 +1516,8 @@
                     </div>
                 </div>
 
-                <div class="rel-card" onclick="addRelated('Bàn Cào Móng Ova Cho Mèo', 39000, './img/BÀN CÀO ova- bìa.png')">
+                <div class="rel-card"
+                    onclick="addRelated('Bàn Cào Móng Ova Cho Mèo', 39000, './img/BÀN CÀO ova- bìa.png')">
                     <div class="rel-card-img-wrap">
                         <img src="./img/BÀN CÀO ova- bìa.png"
                             onerror="this.src='https://placehold.co/300x300/f5fff0/00c853?text=🐾+Bàn+Cào+Ova'"
@@ -1512,142 +1535,142 @@
                     </div>
                 </div>
 
-    </div><!-- end .main -->
+            </div><!-- end .main -->
 
-    <!-- BOTTOM BAR -->
-    <div class="bottom-bar">
-        <button class="btn-cart" onclick="addToCart()">🛒 Thêm vào giỏ</button>
-        <button class="btn-buy" onclick="openOrder()">⚡ Mua ngay</button>
-    </div>
-
-    <!-- CART OVERLAY -->
-    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
-    <div class="cart-drawer" id="cartDrawer">
-        <div class="drawer-title">
-            🛒 Giỏ hàng của bạn
-            <button class="close-btn" onclick="closeCart()">✕</button>
-        </div>
-        <div id="cartItems">
-            <div class="empty-cart">🛍️ Giỏ hàng trống</div>
-        </div>
-        <div id="cartFooter" style="display:none">
-            <div class="cart-total"><span>Tổng cộng:</span><span id="cartTotal">0₫</span></div>
-            <button class="btn-checkout" onclick="closeCart(); openOrder()">Thanh toán ngay ⚡</button>
-        </div>
-    </div>
-
-    <!-- ORDER DRAWER -->
-    <div class="cart-overlay" id="orderOverlay" onclick="closeOrder()"></div>
-    <div class="order-drawer" id="orderDrawer">
-        <div class="drawer-title">
-            📦 Thông tin đặt hàng
-            <button class="close-btn" onclick="closeOrder()">✕</button>
-        </div>
-        <div id="orderForm">
-            <div class="order-summary" id="orderSummary"></div>
-            <div class="form-group">
-                <label>👤 Họ và tên *</label>
-                <input type="text" id="fname" placeholder="Nguyễn Văn A">
+            <!-- BOTTOM BAR -->
+            <div class="bottom-bar">
+                <button class="btn-cart" onclick="addToCart()">🛒 Thêm vào giỏ</button>
+                <button class="btn-buy" onclick="openOrder()">⚡ Mua ngay</button>
             </div>
-            <div class="form-group">
-                <label>📱 Số điện thoại *</label>
-                <input type="tel" id="fphone" placeholder="0901 234 567">
+
+            <!-- CART OVERLAY -->
+            <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+            <div class="cart-drawer" id="cartDrawer">
+                <div class="drawer-title">
+                    🛒 Giỏ hàng của bạn
+                    <button class="close-btn" onclick="closeCart()">✕</button>
+                </div>
+                <div id="cartItems">
+                    <div class="empty-cart">🛍️ Giỏ hàng trống</div>
+                </div>
+                <div id="cartFooter" style="display:none">
+                    <div class="cart-total"><span>Tổng cộng:</span><span id="cartTotal">0₫</span></div>
+                    <button class="btn-checkout" onclick="closeCart(); openOrder()">Thanh toán ngay ⚡</button>
+                </div>
             </div>
-            <div class="form-group">
-                <label>🏠 Địa chỉ giao hàng *</label>
-                <textarea id="faddress"
-                    placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố..."></textarea>
+
+            <!-- ORDER DRAWER -->
+            <div class="cart-overlay" id="orderOverlay" onclick="closeOrder()"></div>
+            <div class="order-drawer" id="orderDrawer">
+                <div class="drawer-title">
+                    📦 Thông tin đặt hàng
+                    <button class="close-btn" onclick="closeOrder()">✕</button>
+                </div>
+                <div id="orderForm">
+                    <div class="order-summary" id="orderSummary"></div>
+                    <div class="form-group">
+                        <label>👤 Họ và tên *</label>
+                        <input type="text" id="fname" placeholder="Nguyễn Văn A">
+                    </div>
+                    <div class="form-group">
+                        <label>📱 Số điện thoại *</label>
+                        <input type="tel" id="fphone" placeholder="0901 234 567">
+                    </div>
+                    <div class="form-group">
+                        <label>🏠 Địa chỉ giao hàng *</label>
+                        <textarea id="faddress"
+                            placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>💬 Ghi chú (tuỳ chọn)</label>
+                        <input type="text" id="fnote" placeholder="VD: Gọi trước khi giao, nhà mặt tiền...">
+                    </div>
+                    <button class="btn-order" onclick="submitOrder()">✅ Xác nhận đặt hàng</button>
+                </div>
+                <div class="success-msg" id="successMsg">
+                    <div class="check-icon">🎉</div>
+                    <h3>Đặt hàng thành công!</h3>
+                    <p>Cảm ơn bạn đã tin tưởng PetShop VN.<br>Đơn hàng sẽ được xử lý và giao trong 2–24h.</p>
+                    <p style="margin-top:8px;color:#aaa;font-size:.75rem">Mã đơn: #<span id="orderCode"></span></p>
+                </div>
             </div>
-            <div class="form-group">
-                <label>💬 Ghi chú (tuỳ chọn)</label>
-                <input type="text" id="fnote" placeholder="VD: Gọi trước khi giao, nhà mặt tiền...">
-            </div>
-            <button class="btn-order" onclick="submitOrder()">✅ Xác nhận đặt hàng</button>
-        </div>
-        <div class="success-msg" id="successMsg">
-            <div class="check-icon">🎉</div>
-            <h3>Đặt hàng thành công!</h3>
-            <p>Cảm ơn bạn đã tin tưởng PetShop VN.<br>Đơn hàng sẽ được xử lý và giao trong 2–24h.</p>
-            <p style="margin-top:8px;color:#aaa;font-size:.75rem">Mã đơn: #<span id="orderCode"></span></p>
-        </div>
-    </div>
 
-    <script>
-        let currentImg = 0;
-        let qty = 1;
-        let cart = [];
-        let selectedVariant = { label: '1kg', price: 129000 };
+            <script>
+                let currentImg = 0;
+                let qty = 1;
+                let cart = [];
+                let selectedVariant = { label: '1kg', price: 129000 };
 
-        const variantData = {
-            '1kg': { salePrice: 129000, oldPrice: 249000 },
-            '2kg': { salePrice: 249000, oldPrice: 499000 },
-            '3kg': { salePrice: 349000, oldPrice: 749000 },
-        };
+                const variantData = {
+                    '1kg': { salePrice: 129000, oldPrice: 249000 },
+                    '2kg': { salePrice: 249000, oldPrice: 499000 },
+                    '3kg': { salePrice: 349000, oldPrice: 749000 },
+                };
 
-        function selectVariant(btn, label, price) {
-            document.querySelectorAll('.variant-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const data = variantData[label];
-            selectedVariant = { label, price: data.salePrice };
-            // Update label
-            document.getElementById('selectedVariantLabel').textContent = `${label} — ${data.salePrice.toLocaleString('vi-VN')}₫`;
-            // Update main price block
-            document.querySelector('.price-main').textContent = data.salePrice.toLocaleString('vi-VN') + '₫';
-            document.querySelector('.price-old').textContent = data.oldPrice.toLocaleString('vi-VN') + '₫';
-            const discountPct = Math.round((1 - data.salePrice / data.oldPrice) * 100);
-            document.querySelector('.price-discount').textContent = `-${discountPct}%`;
-        }
+                function selectVariant(btn, label, price) {
+                    document.querySelectorAll('.variant-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const data = variantData[label];
+                    selectedVariant = { label, price: data.salePrice };
+                    // Update label
+                    document.getElementById('selectedVariantLabel').textContent = `${label} — ${data.salePrice.toLocaleString('vi-VN')}₫`;
+                    // Update main price block
+                    document.querySelector('.price-main').textContent = data.salePrice.toLocaleString('vi-VN') + '₫';
+                    document.querySelector('.price-old').textContent = data.oldPrice.toLocaleString('vi-VN') + '₫';
+                    const discountPct = Math.round((1 - data.salePrice / data.oldPrice) * 100);
+                    document.querySelector('.price-discount').textContent = `-${discountPct}%`;
+                }
 
-        function setImg(i) {
-            const imgs = document.querySelectorAll('#mainImgs img');
-            const thumbs = document.querySelectorAll('#thumbRow img');
-            const dots = document.querySelectorAll('.scroll-dot');
-            imgs[currentImg].classList.remove('active');
-            thumbs[currentImg].classList.remove('active');
-            dots[currentImg].classList.remove('active');
-            currentImg = i;
-            imgs[i].classList.add('active');
-            thumbs[i].classList.add('active');
-            dots[i].classList.add('active');
-        }
+                function setImg(i) {
+                    const imgs = document.querySelectorAll('#mainImgs img');
+                    const thumbs = document.querySelectorAll('#thumbRow img');
+                    const dots = document.querySelectorAll('.scroll-dot');
+                    imgs[currentImg].classList.remove('active');
+                    thumbs[currentImg].classList.remove('active');
+                    dots[currentImg].classList.remove('active');
+                    currentImg = i;
+                    imgs[i].classList.add('active');
+                    thumbs[i].classList.add('active');
+                    dots[i].classList.add('active');
+                }
 
-        function changeQty(d) {
-            qty = Math.max(1, qty + d);
-            document.getElementById('qtyDisplay').textContent = qty;
-        }
+                function changeQty(d) {
+                    qty = Math.max(1, qty + d);
+                    document.getElementById('qtyDisplay').textContent = qty;
+                }
 
-        function addToCart() {
-            const name = `Bánh cá thưởng cho mèo (${selectedVariant.label})`;
-            const img = document.querySelector('#mainImgs img.active')?.src || '';
-            const existing = cart.find(i => i.name === name);
-            if (existing) existing.qty += qty;
-            else cart.push({ name, price: selectedVariant.price, qty, img });
-            updateCartUI();
-            openCart();
-        }
+                function addToCart() {
+                    const name = `Bánh cá thưởng cho mèo (${selectedVariant.label})`;
+                    const img = document.querySelector('#mainImgs img.active')?.src || '';
+                    const existing = cart.find(i => i.name === name);
+                    if (existing) existing.qty += qty;
+                    else cart.push({ name, price: selectedVariant.price, qty, img });
+                    updateCartUI();
+                    openCart();
+                }
 
-        function addRelated(name, price, img) {
-            const existing = cart.find(i => i.name === name);
-            if (existing) existing.qty++;
-            else cart.push({ name, price, qty: 1, img: img || '' });
-            updateCartUI();
-            openCart();
-        }
+                function addRelated(name, price, img) {
+                    const existing = cart.find(i => i.name === name);
+                    if (existing) existing.qty++;
+                    else cart.push({ name, price, qty: 1, img: img || '' });
+                    updateCartUI();
+                    openCart();
+                }
 
-        function updateCartUI() {
-            const count = cart.reduce((s, i) => s + i.qty, 0);
-            document.getElementById('cartCount').textContent = count;
-            const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
-            const itemsEl = document.getElementById('cartItems');
-            const footer = document.getElementById('cartFooter');
-            if (cart.length === 0) {
-                itemsEl.innerHTML = '<div class="empty-cart">🛍️ Giỏ hàng trống</div>';
-                footer.style.display = 'none';
-                return;
-            }
-            footer.style.display = 'block';
-            document.getElementById('cartTotal').textContent = total.toLocaleString('vi-VN') + '₫';
-            itemsEl.innerHTML = cart.map((item, idx) => `
+                function updateCartUI() {
+                    const count = cart.reduce((s, i) => s + i.qty, 0);
+                    document.getElementById('cartCount').textContent = count;
+                    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+                    const itemsEl = document.getElementById('cartItems');
+                    const footer = document.getElementById('cartFooter');
+                    if (cart.length === 0) {
+                        itemsEl.innerHTML = '<div class="empty-cart">🛍️ Giỏ hàng trống</div>';
+                        footer.style.display = 'none';
+                        return;
+                    }
+                    footer.style.display = 'block';
+                    document.getElementById('cartTotal').textContent = total.toLocaleString('vi-VN') + '₫';
+                    itemsEl.innerHTML = cart.map((item, idx) => `
       <div class="cart-item">
         <img src="${item.img || 'https://down-vn.img.susercontent.com/file/vn-11134207-820l4-mieczyztx05d31.webp'}" alt="${item.name}" onerror="this.src='https://placehold.co/64x64/f9f9f9/ccc?text=SP'">
         <div class="ci-info">
@@ -1660,146 +1683,146 @@
           </div>
         </div>
       </div>`).join('');
-        }
-
-        function cartQty(idx, d) {
-            cart[idx].qty += d;
-            if (cart[idx].qty <= 0) cart.splice(idx, 1);
-            updateCartUI();
-        }
-
-        function openCart() {
-            document.getElementById('cartOverlay').classList.add('open');
-            document.getElementById('cartDrawer').style.display = 'block';
-        }
-        function closeCart() {
-            document.getElementById('cartOverlay').classList.remove('open');
-            document.getElementById('cartDrawer').style.display = 'none';
-        }
-
-        function openOrder() {
-            document.getElementById('orderForm').style.display = 'block';
-            document.getElementById('successMsg').style.display = 'none';
-            // build summary
-            let rows = '';
-            let total = 0;
-            if (cart.length > 0) {
-                cart.forEach(i => {
-                    rows += `<div class="os-row"><span>${i.name} x${i.qty}</span><span>${(i.price * i.qty).toLocaleString('vi-VN')}₫</span></div>`;
-                    total += i.price * i.qty;
-                });
-            } else {
-                const name = `Bánh cá thưởng cho mèo (${selectedVariant.label})`;
-                rows = `<div class="os-row"><span>${name} x${qty}</span><span>${(selectedVariant.price * qty).toLocaleString('vi-VN')}₫</span></div>`;
-                total = selectedVariant.price * qty;
-            }
-            rows += `<div class="os-row" style="color:#00c853;font-weight:800"><span>🚚 Phí vận chuyển</span><span>Miễn phí</span></div>`;
-            rows += `<div class="os-row total"><span>Tổng đơn hàng</span><span>${total.toLocaleString('vi-VN')}₫</span></div>`;
-            document.getElementById('orderSummary').innerHTML = rows;
-            document.getElementById('orderOverlay').classList.add('open');
-            document.getElementById('orderDrawer').classList.add('open');
-        }
-        function closeOrder() {
-            document.getElementById('orderOverlay').classList.remove('open');
-            document.getElementById('orderDrawer').classList.remove('open');
-        }
-
-        function submitOrder() {
-            const name    = document.getElementById('fname').value.trim();
-            const phone   = document.getElementById('fphone').value.trim();
-            const address = document.getElementById('faddress').value.trim();
-            const note    = document.getElementById('fnote').value.trim();
-
-            if (!name || !phone || !address) {
-                alert('⚠️ Vui lòng điền đầy đủ Họ tên, Số điện thoại và Địa chỉ!');
-                return;
-            }
-
-            // ✅ DÁN URL APPS SCRIPT CỦA BẠN VÀO ĐÂY
-            const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxp1bqABxl_crST_U1_sffbVAmlGWtgMaPLRXjZogP65J1pF8HX9nUrHcBdBWF9eks6/exec';
-
-            // Build product + price summary
-            let sanPham, gia;
-            if (cart.length > 0) {
-                sanPham = cart.map(i => `${i.name} x${i.qty}`).join(', ');
-                gia = cart.reduce((s, i) => s + i.price * i.qty, 0).toLocaleString('vi-VN') + '₫';
-            } else {
-                sanPham = `Bánh cá thưởng cho mèo (${selectedVariant.label}) x1`;
-                gia = selectedVariant.price.toLocaleString('vi-VN') + '₫';
-            }
-
-            const orderCode = Math.floor(100000 + Math.random() * 900000);
-
-            const payload = {
-                hoTen:    name,
-                sdt:      phone,
-                diaChi:   address,
-                sanPham:  sanPham,
-                gia:      gia,
-                ghiChu:   note,
-                maDon:    '#' + orderCode
-            };
-
-            // Show success immediately (don't wait for sheet)
-            document.getElementById('orderForm').style.display = 'none';
-            document.getElementById('successMsg').style.display = 'block';
-            document.getElementById('orderCode').textContent = orderCode;
-            cart = [];
-            updateCartUI();
-
-            // Send data to Google Sheet in background
-            fetch(SHEET_URL, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            }).catch(err => console.warn('Sheet sync failed:', err));
-        }
-
-        // Auto-slideshow
-        setInterval(() => { setImg((currentImg + 1) % 7); }, 3000);
-        // FLASH SALE COUNTDOWN — 15 minutes
-        (function() {
-            const DURATION = 15 * 60; // seconds
-            let remaining = DURATION;
-            const minEl = document.getElementById('cdMin');
-            const secEl = document.getElementById('cdSec');
-            const banner = document.getElementById('flashSaleBanner');
-
-            function tick() {
-                if (remaining <= 0) {
-                    banner.innerHTML = '<div class="flash-expired">⏰ Flash Sale đã kết thúc</div>';
-                    banner.style.background = 'none';
-                    banner.style.boxShadow = 'none';
-                    banner.style.animation = 'none';
-                    banner.style.padding = '0';
-                    return;
                 }
-                const m = Math.floor(remaining / 60);
-                const s = remaining % 60;
-                minEl.textContent = String(m).padStart(2, '0');
-                secEl.textContent = String(s).padStart(2, '0');
 
-                // Pulse red when under 1 minute
-                if (remaining <= 60) {
-                    document.querySelectorAll('.cd-block').forEach(b => b.style.background = 'rgba(255,255,255,.35)');
+                function cartQty(idx, d) {
+                    cart[idx].qty += d;
+                    if (cart[idx].qty <= 0) cart.splice(idx, 1);
+                    updateCartUI();
                 }
-                remaining--;
-            }
-            tick();
-            setInterval(tick, 1000);
-        })();
-        const day = String(today.getDate()).padStart(2, '0');
-        const month = String(today.getMonth() + 1).padStart(2, '0');
-        const year = today.getFullYear();
 
-        const formattedDate = `${day}/${month}/${year}`;
-        document.getElementById("rc-date").textContent = formattedDate;
-        document.getElementById("rc-date1").textContent = formattedDate;
-        document.getElementById("rc-date2").textContent = formattedDate;
-        document.getElementById("rc-date3").textContent = formattedDate;
-        document.getElementById("rc-date4").textContent = formattedDate;
-    </script>
+                function openCart() {
+                    document.getElementById('cartOverlay').classList.add('open');
+                    document.getElementById('cartDrawer').style.display = 'block';
+                }
+                function closeCart() {
+                    document.getElementById('cartOverlay').classList.remove('open');
+                    document.getElementById('cartDrawer').style.display = 'none';
+                }
+
+                function openOrder() {
+                    document.getElementById('orderForm').style.display = 'block';
+                    document.getElementById('successMsg').style.display = 'none';
+                    // build summary
+                    let rows = '';
+                    let total = 0;
+                    if (cart.length > 0) {
+                        cart.forEach(i => {
+                            rows += `<div class="os-row"><span>${i.name} x${i.qty}</span><span>${(i.price * i.qty).toLocaleString('vi-VN')}₫</span></div>`;
+                            total += i.price * i.qty;
+                        });
+                    } else {
+                        const name = `Bánh cá thưởng cho mèo (${selectedVariant.label})`;
+                        rows = `<div class="os-row"><span>${name} x${qty}</span><span>${(selectedVariant.price * qty).toLocaleString('vi-VN')}₫</span></div>`;
+                        total = selectedVariant.price * qty;
+                    }
+                    rows += `<div class="os-row" style="color:#00c853;font-weight:800"><span>🚚 Phí vận chuyển</span><span>Miễn phí</span></div>`;
+                    rows += `<div class="os-row total"><span>Tổng đơn hàng</span><span>${total.toLocaleString('vi-VN')}₫</span></div>`;
+                    document.getElementById('orderSummary').innerHTML = rows;
+                    document.getElementById('orderOverlay').classList.add('open');
+                    document.getElementById('orderDrawer').classList.add('open');
+                }
+                function closeOrder() {
+                    document.getElementById('orderOverlay').classList.remove('open');
+                    document.getElementById('orderDrawer').classList.remove('open');
+                }
+
+                function submitOrder() {
+                    const name = document.getElementById('fname').value.trim();
+                    const phone = document.getElementById('fphone').value.trim();
+                    const address = document.getElementById('faddress').value.trim();
+                    const note = document.getElementById('fnote').value.trim();
+
+                    if (!name || !phone || !address) {
+                        alert('⚠️ Vui lòng điền đầy đủ Họ tên, Số điện thoại và Địa chỉ!');
+                        return;
+                    }
+
+                    // ✅ DÁN URL APPS SCRIPT CỦA BẠN VÀO ĐÂY
+                    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxp1bqABxl_crST_U1_sffbVAmlGWtgMaPLRXjZogP65J1pF8HX9nUrHcBdBWF9eks6/exec';
+
+                    // Build product + price summary
+                    let sanPham, gia;
+                    if (cart.length > 0) {
+                        sanPham = cart.map(i => `${i.name} x${i.qty}`).join(', ');
+                        gia = cart.reduce((s, i) => s + i.price * i.qty, 0).toLocaleString('vi-VN') + '₫';
+                    } else {
+                        sanPham = `Bánh cá thưởng cho mèo (${selectedVariant.label}) x1`;
+                        gia = selectedVariant.price.toLocaleString('vi-VN') + '₫';
+                    }
+
+                    const orderCode = Math.floor(100000 + Math.random() * 900000);
+
+                    const payload = {
+                        hoTen: name,
+                        sdt: phone,
+                        diaChi: address,
+                        sanPham: sanPham,
+                        gia: gia,
+                        ghiChu: note,
+                        maDon: '#' + orderCode
+                    };
+
+                    // Show success immediately (don't wait for sheet)
+                    document.getElementById('orderForm').style.display = 'none';
+                    document.getElementById('successMsg').style.display = 'block';
+                    document.getElementById('orderCode').textContent = orderCode;
+                    cart = [];
+                    updateCartUI();
+
+                    // Send data to Google Sheet in background
+                    fetch(SHEET_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    }).catch(err => console.warn('Sheet sync failed:', err));
+                }
+
+                // Auto-slideshow
+                setInterval(() => { setImg((currentImg + 1) % 7); }, 3000);
+                // FLASH SALE COUNTDOWN — 15 minutes
+                (function () {
+                    const DURATION = 15 * 60; // seconds
+                    let remaining = DURATION;
+                    const minEl = document.getElementById('cdMin');
+                    const secEl = document.getElementById('cdSec');
+                    const banner = document.getElementById('flashSaleBanner');
+
+                    function tick() {
+                        if (remaining <= 0) {
+                            banner.innerHTML = '<div class="flash-expired">⏰ Flash Sale đã kết thúc</div>';
+                            banner.style.background = 'none';
+                            banner.style.boxShadow = 'none';
+                            banner.style.animation = 'none';
+                            banner.style.padding = '0';
+                            return;
+                        }
+                        const m = Math.floor(remaining / 60);
+                        const s = remaining % 60;
+                        minEl.textContent = String(m).padStart(2, '0');
+                        secEl.textContent = String(s).padStart(2, '0');
+
+                        // Pulse red when under 1 minute
+                        if (remaining <= 60) {
+                            document.querySelectorAll('.cd-block').forEach(b => b.style.background = 'rgba(255,255,255,.35)');
+                        }
+                        remaining--;
+                    }
+                    tick();
+                    setInterval(tick, 1000);
+                })();
+                const day = String(today.getDate()).padStart(2, '0');
+                const month = String(today.getMonth() + 1).padStart(2, '0');
+                const year = today.getFullYear();
+
+                const formattedDate = `${day}/${month}/${year}`;
+                document.getElementById("rc-date").textContent = formattedDate;
+                document.getElementById("rc-date1").textContent = formattedDate;
+                document.getElementById("rc-date2").textContent = formattedDate;
+                document.getElementById("rc-date3").textContent = formattedDate;
+                document.getElementById("rc-date4").textContent = formattedDate;
+            </script>
 </body>
 
 </html>
