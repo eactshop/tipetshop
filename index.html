@@ -1739,26 +1739,75 @@
                     }
 
                     // ✅ DÁN URL APPS SCRIPT CỦA BẠN VÀO ĐÂY
-                    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxp1bqABxl_crST_U1_sffbVAmlGWtgMaPLRXjZogP65J1pF8HX9nUrHcBdBWF9eks6/exec';
+                    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbziFphrXnnlUFS6pxuZkLEDgTjkdle3rEcz_m2yTcazXL73Uy8HWx0eQHVn78ooYpJc/exec';
+
+                    // ===== COD calculation rules =====
+                    // bánh cá: 50k/kg
+                    // thanh súp gemluck: 560đ/cái (weight ~0)
+                    // bàn cào móng tròn: 18k/cái (weight ~0)
+                    // bàn cào móng ova: 18k/cái (weight ~0)
+                    // hạt kawaicat 1.5kg: 90k/gói
+                    function calcCodAndWeight(items) {
+                        let totalCod = 0;
+                        let totalWeight = 0;
+                        items.forEach(item => {
+                            const n = item.name.toLowerCase();
+                            const q = item.qty;
+                            if (n.includes('bánh cá') || n.includes('banh ca')) {
+                                // extract kg from variant label e.g. "1kg", "2kg", "1,5kg"
+                                const kgMatch = n.match(/([\d,\.]+)\s*kg/);
+                                const kg = kgMatch ? parseFloat(kgMatch[1].replace(',', '.')) : 1;
+                                totalWeight += kg * q;
+                                totalCod += kg * q * 50000;
+                            } else if (n.includes('kawaicat') || n.includes('hạt')) {
+                                // 1.5kg bag
+                                totalWeight += 1.5 * q;
+                                totalCod += q * 90000;
+                            } else if (n.includes('gemluck') || n.includes('thanh súp')) {
+                                totalWeight += 0.05 * q;
+                                totalCod += q * 560;
+                            } else if (n.includes('bàn cào') || n.includes('ban cao')) {
+                                totalWeight += 0.1 * q;
+                                totalCod += q * 18000;
+                            } else {
+                                // fallback: use price as cod
+                                totalCod += item.price * q;
+                            }
+                        });
+                        return { cod: totalCod, weight: totalWeight };
+                    }
 
                     // Build product + price summary
-                    let sanPham, gia;
+                    let sanPham, gia, orderItems;
                     if (cart.length > 0) {
+                        orderItems = cart;
                         sanPham = cart.map(i => `${i.name} x${i.qty}`).join(', ');
-                        gia = cart.reduce((s, i) => s + i.price * i.qty, 0).toLocaleString('vi-VN') + '₫';
+                        gia = cart.reduce((s, i) => s + i.price * i.qty, 0);
                     } else {
-                        sanPham = `Bánh cá thưởng cho mèo (${selectedVariant.label}) x1`;
-                        gia = selectedVariant.price.toLocaleString('vi-VN') + '₫';
+                        orderItems = [{ name: `Bánh cá thưởng cho mèo (${selectedVariant.label})`, price: selectedVariant.price, qty: qty }];
+                        sanPham = `Bánh cá thưởng cho mèo (${selectedVariant.label}) x${qty}`;
+                        gia = selectedVariant.price * qty;
                     }
+
+                    const { cod, weight } = calcCodAndWeight(orderItems);
+                    const phiShip = 20000;
+
+                    // Format timestamp: HH:MM:SS D/M/YYYY
+                    const now = new Date();
+                    const thoiGian = `${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}:${String(now.getSeconds()).padStart(2,'0')} ${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`;
 
                     const orderCode = Math.floor(100000 + Math.random() * 900000);
 
                     const payload = {
+                        thoiGian: thoiGian,
                         hoTen: name,
                         sdt: phone,
                         diaChi: address,
                         sanPham: sanPham,
                         gia: gia,
+                        canNang: weight,
+                        cod: cod,
+                        phiShip: phiShip,
                         ghiChu: note,
                         maDon: '#' + orderCode
                     };
@@ -1812,6 +1861,7 @@
                     tick();
                     setInterval(tick, 1000);
                 })();
+                const today = new Date();
                 const day = String(today.getDate()).padStart(2, '0');
                 const month = String(today.getMonth() + 1).padStart(2, '0');
                 const year = today.getFullYear();
